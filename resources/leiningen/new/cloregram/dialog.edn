@@ -1,0 +1,18 @@
+{:level :info
+
+ :levels
+ {"cloregram" :info
+  "{{name}}" :debug}
+
+ :outputs
+ {:console {:type :print
+            :format :pretty
+            :timestamp :short
+            :levels {"cloregram" :info}
+            :middleware
+            [cloregram.test.infrastructure.logging/add-test-prefix]}
+  :json-file {:type :file
+              :path "./logs/logs.json"
+              :format :json
+              :middleware
+              [cloregram.logging/transform-json]}}}
