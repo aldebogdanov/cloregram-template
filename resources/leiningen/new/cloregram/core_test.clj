@@ -5,7 +5,7 @@
             [cloregram.test.infrastructure.client :as c]
             [cloregram.test.infrastructure.inspector :as i]))
 
-(use-fixtures :once fix/use-test-environment fix/setup-schema)
+(use-fixtures :once fix/use-test-environment fix/load-initial-data)
 
 (deftest core-test
   (u/add :test-user)

@@ -1,1 +1,8 @@
-{:bot/token "0000000000:XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"}
+{:bot/token "0000000000:XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
+ :bot/ip "127.0.0.1"
+ :bot/https? false
+ :bot/admins ["admiin"]
+
+ :db/connection {:uri "datomic:dev://localhost:4334/{{name}}"}
+
+ :project/config {:payment/token "000000000:TEST:00000"}}
