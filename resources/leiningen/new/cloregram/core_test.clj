@@ -5,12 +5,12 @@
             [cloregram.test.infrastructure.client :as c]
             [cloregram.test.infrastructure.inspector :as i]))
 
-(use-fixtures :once fix/use-test-environment fix/setup-schema)
+(use-fixtures :once fix/use-test-environment fix/load-initial-data)
 
 (deftest core-test
   (u/add :test-user)
 
   (c/send-text :test-user "/start")
 
-  (-> (u/wait-main-message :test-user)
+  (-> (u/main-message :test-user)
       (i/check-text "Welcome to {{name}} project, test-user!")))
