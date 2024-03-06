@@ -12,6 +12,10 @@
   :main ^:skip-aot {{name}}.core
   :target-path "target/%s"
   :profiles {:dev {:jvm-opts ["-Dconfig.path=config.dev.edn"]}
+             :repl {:dependencies [[http-kit "2.7.0"]
+                                   [compojure "1.7.0"]
+                                   [ring/ring-json "0.5.1"]]
+                    :jvm-opts ["-Dconfig.path=config.dev.edn"]
              :test {:dependencies [[eftest "0.6.0"]
                                    [http-kit "2.7.0"]
                                    [compojure "1.7.0"]
