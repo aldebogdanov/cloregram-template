@@ -14,7 +14,7 @@
 
   :jvm-opts ["--add-opens=java.base/java.nio=ALL-UNNAMED"
              "--add-opens=java.base/sun.nio.ch=ALL-UNNAMED"]
-  
+
   :profiles {:dev {:jvm-opts ["-Dconfig.path=config.dev.edn"]}
              :repl {:dependencies [[http-kit "2.7.0"]
                                    [compojure "1.7.0"]

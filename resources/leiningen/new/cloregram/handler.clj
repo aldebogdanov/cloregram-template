@@ -9,7 +9,7 @@
 
 ;; Uncomment if you need payment processing or remove otherwise
 (comment
-  
+
   (defn payment
     [{:keys [user payment]}]
     (api/send-message user
