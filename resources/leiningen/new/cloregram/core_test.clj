@@ -1,9 +1,9 @@
 (ns {{name}}.core-test
   (:require [clojure.test :refer :all]
-            [cloregram.test.fixtures :as fix]
-            [cloregram.test.infrastructure.users :as u]
-            [cloregram.test.infrastructure.client :as c]
-            [cloregram.test.infrastructure.inspector :as i]))
+            [cloregram.validation.fixtures :as fix]
+            [cloregram.validation.users :as u]
+            [cloregram.validation.client :as c]
+            [cloregram.validation.inspector :as i]))
 
 (use-fixtures :once fix/use-test-environment fix/load-initial-data)
 

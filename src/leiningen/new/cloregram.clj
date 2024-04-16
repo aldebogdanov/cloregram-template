@@ -8,10 +8,9 @@
   [name]
   (let [data {:name name
               :sanitized (tmpl/name-to-path name)}]
-    (main/info "Generating fresh 'lein new' weedbreed/cloregram project.")
+    (main/info "Generating fresh 'lein new' algoflora/cloregram project.")
     (tmpl/->files data
                   ["resources/config.example.edn" (render "config.edn" data)]
-                  ["resources/dialog.edn" (render "dialog.edn" data)]
                   ["resources/schema/.gitkeep" ""]
                   ["resources/data/.gitkeep" ""]
                   ["src/{{sanitized}}/core.clj" (render "core.clj" data)]
