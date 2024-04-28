@@ -13,6 +13,7 @@
                   ["resources/config.example.edn" (render "config.edn" data)]
                   ["resources/schema/.gitkeep" ""]
                   ["resources/data/.gitkeep" ""]
+                  ["resources/texts/.gitkeep" ""]
                   ["src/{{sanitized}}/core.clj" (render "core.clj" data)]
                   ["src/{{sanitized}}/handler.clj" (render "handler.clj" data)]
                   ["test/{{sanitized}}/core_test.clj" (render "core_test.clj" data)]

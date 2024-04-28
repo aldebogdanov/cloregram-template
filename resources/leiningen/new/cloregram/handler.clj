@@ -1,21 +1,22 @@
 (ns {{name}}.handler
   (:require [cloregram.api :as api]
+            [cloregram.dynamic :refer :all]  
             [cloregram.utils :as utl]))
 
 (defn common
-  [{:keys [user message]}]
-  (api/send-message user
-                    (format "Welcome to {{name}} project, %s!" (utl/username user)) []))
+  [{:keys [message]}]
+  (api/send-message *current-user*
+                    (format "Welcome to {{name}} project, %s!" (utl/username *current-user*)) []))
 
 ;; Uncomment if you need payment processing or remove otherwise
 (comment
 
   (defn payment
-    [{:keys [user payment]}]
-    (api/send-message user
+    [{:keys [payment]}]
+    (api/send-message *current-user*
                       (format "Successful payment of %d %s with payload %s from %s"
                               (/ (:total_amount payment) 100)
                               (:currency payment)
                               (:invoice_payload payment)
-                              (utl/username user))
+                              (utl/username *current-user*))
                       [] :temp)))
