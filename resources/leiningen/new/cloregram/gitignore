@@ -23,5 +23,9 @@ pom.xml.asc
 
 *.DS_Store
 
+resources/config.dev.edn
+resources/config.test.edn
+resources/config.prod.edn
+
 .emacs.desktop
 .emacs.desktop.lock
