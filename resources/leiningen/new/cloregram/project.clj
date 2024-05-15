@@ -5,7 +5,7 @@
             :url "https://www.eclipse.org/legal/epl-2.0/"}
 
   :dependencies [[org.clojure/clojure "1.11.2"]
-                 [io.github.algoflora/cloregram "0.11.3"]]
+                 [io.github.algoflora/cloregram "0.11.4"]]
 
   :plugins [[lein-eftest "0.6.0"]]
 
