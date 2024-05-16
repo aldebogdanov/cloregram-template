@@ -15,7 +15,7 @@
                   ["resources/data/.gitkeep" ""]
                   ["resources/texts/.gitkeep" ""]
                   ["src/{{sanitized}}/core.clj" (render "core.clj" data)]
-                  ["src/{{sanitized}}/handler.clj" (render "handler.clj" data)]
+                  ["src/{{sanitized}}/handlers.clj" (render "handlers.clj" data)]
                   ["test/{{sanitized}}/core_test.clj" (render "core_test.clj" data)]
                   ["logs/logs.json" ""]
                   [".gitignore" (render "gitignore" data)]

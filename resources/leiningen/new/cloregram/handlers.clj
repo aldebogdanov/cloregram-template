@@ -1,9 +1,9 @@
-(ns {{name}}.handler
+(ns {{name}}.handlers
   (:require [cloregram.api :as api]
             [cloregram.dynamic :refer :all]  
             [cloregram.utils :as utl]))
 
-(defn common
+(defn main
   [{:keys [message]}]
   (api/send-message *current-user*
                     (format "Welcome to {{name}} project, %s!" (utl/username *current-user*)) []))

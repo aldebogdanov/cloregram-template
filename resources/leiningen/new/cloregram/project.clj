@@ -5,7 +5,7 @@
             :url "https://www.eclipse.org/legal/epl-2.0/"}
 
   :dependencies [[org.clojure/clojure "1.11.2"]
-                 [io.github.algoflora/cloregram "0.11.4"]]
+                 [io.github.algoflora/cloregram "0.12.0"]]
 
   :plugins [[lein-eftest "0.6.0"]]
 
@@ -16,13 +16,10 @@
              "--add-opens=java.base/sun.nio.ch=ALL-UNNAMED"]
 
   :profiles {:dev {:jvm-opts ["-Dconfig.path=config.dev.edn"]}
-             :repl {:dependencies [[http-kit "2.7.0"]
-                                   [compojure "1.7.0"]
+             :repl {:dependencies [[compojure "1.7.0"]
                                    [ring/ring-json "0.5.1"]]
                     :jvm-opts ["-Dconfig.path=config.dev.edn"]}
-             :test {:dependencies [[eftest "0.6.0"]
-                                   [http-kit "2.7.0"]
-                                   [compojure "1.7.0"]
+             :test {:dependencies [[compojure "1.7.0"]
                                    [ring/ring-json "0.5.1"]]
                     :jvm-opts ["-Dconfig.path=config.test.edn"]}
              :uberjar {:aot :all
