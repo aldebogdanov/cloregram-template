@@ -1,4 +1,4 @@
-(defproject io.github.algoflora/lein-template.cloregram "0.4.1"
+(defproject io.github.algoflora/lein-template.cloregram "0.4.2"
   
   :description "Template project of Telegram Bot Application using Cloregram framewwork"
 
